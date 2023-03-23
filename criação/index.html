@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background: black;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #mensagem {
+        color: #fff;
+        font-size: 30px;
+    }
+
+    #mensagem::after {
+        content: "|";
+        margin-left: 5px;
+        animation: blink 0.7s infinite;
+    }
+</style>
+
+<head>
+    <title>Title of the document</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/animações.css">
+</head>
+
+<body>
+    <p id="mensagem">"Olá, eu sou do code em um minuto e vou te ajudar a aprender programação"</p>
+    <script src="/Js/script.js"></script>
+
+    <script>
+        'use strict';
+
+        function typewriter(el) {
+            const textArray = el.innerHTML.split('');
+            el.innerHTML = '';
+            textArray.forEach((letter, i) =>
+                setTimeout(() => (el.innerHTML += letter), 55 * i)
+            );
+        }
+        typewriter(mensagem);
+    </script>
+</body>
+
+</html>
